@@ -7,13 +7,11 @@ import {
   CLEAR_COMPLETED
 } from '../constants/ActionTypes';
 
-const initialState = [
-  {
-    id: 0,
-    text: 'Task 1',
-    completed: false
-  }
-]
+let initialState = [];
+
+if (localStorage.getItem('todos')) {
+  initialState = JSON.parse(localStorage.getItem('todos'));
+}
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
