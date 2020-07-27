@@ -1,6 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import TodoTextInput from './TodoTextInput'
+import React from 'react';
+import TodoTextInput from './TodoTextInput';
 
 const Header = ({ addTodo }) => (
   <header className="header">
@@ -15,10 +14,6 @@ const Header = ({ addTodo }) => (
       placeholder="What needs to be done?"
     />
   </header>
-)
+);
 
-Header.propTypes = {
-  addTodo: PropTypes.func.isRequired
-}
-
-export default Header
+export default Header;

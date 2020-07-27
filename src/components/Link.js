@@ -1,6 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import React from 'react';
+import classnames from 'classnames';
 
 const Link = ({ active, children, setFilter }) =>
   (
@@ -12,13 +11,6 @@ const Link = ({ active, children, setFilter }) =>
     >
       {children}
     </a>
-  )
+  );
 
-
-Link.propTypes = {
-  active: PropTypes.bool.isRequired,
-  children: PropTypes.node.isRequired,
-  setFilter: PropTypes.func.isRequired
-}
-
-export default Link
+export default Link;

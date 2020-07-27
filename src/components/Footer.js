@@ -1,13 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import FilterLink from '../containers/FilterLink'
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters'
+import React from 'react';
+import FilterLink from '../containers/FilterLink';
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../constants/TodoFilters';
 
 const FILTER_TITLES = {
   [SHOW_ALL]: 'All',
   [SHOW_ACTIVE]: 'Active',
   [SHOW_COMPLETED]: 'Completed'
-}
+};
 
 const Footer = (props) => {
   const { activeCount, completedCount, onClearCompleted } = props
@@ -35,13 +34,7 @@ const Footer = (props) => {
         
       }
     </footer>
-  )
+  );
 }
 
-Footer.propTypes = {
-  completedCount: PropTypes.number.isRequired,
-  activeCount: PropTypes.number.isRequired,
-  onClearCompleted: PropTypes.func.isRequired,
-}
-
-export default Footer
+export default Footer;

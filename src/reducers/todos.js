@@ -5,13 +5,13 @@ import {
   COMPLETE_TODO,
   COMPLETE_ALL_TODOS,
   CLEAR_COMPLETED
-} from '../constants/ActionTypes'
+} from '../constants/ActionTypes';
 
 const initialState = [
   {
-    text: 'Use Redux',
-    completed: false,
-    id: 0
+    id: 0,
+    text: 'Task 1',
+    completed: false
   }
 ]
 
@@ -22,8 +22,8 @@ export default function todos(state = initialState, action) {
         ...state,
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
-          completed: false,
-          text: action.text
+          text: action.text,
+          completed: false
         }
       ]
 
